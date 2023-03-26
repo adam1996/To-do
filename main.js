@@ -52,5 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
       
         taskInput.value = '';
       });
+
+      form.addEventListener('reset', (event) => {
+        event.preventDefault();
+
+        // remove all tasks from the tasks array
+        tasks = [];
+        taskList.innerHTML = '';
+      });
+
   });
   
