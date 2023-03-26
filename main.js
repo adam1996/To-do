@@ -38,9 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', (event) => {
         event.preventDefault(); //precents the default functionality of the submit button
         console.log('This is working');
-      
+        
         const taskInput = document.getElementById('action');
         const task = taskInput.value;
+
+        if(!task){
+            console.log('NULL VAL');
+            return;
+        }
       
         const taskItem = document.createElement('li');
         taskItem.textContent = task;
